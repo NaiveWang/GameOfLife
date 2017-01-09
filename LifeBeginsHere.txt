@@ -1,0 +1,9 @@
+/**
+ *  Hey yo!
+ *  This is my first git project,
+ *  About a game , game of life.
+ *
+ *  From here,I'll write a platform,
+ *  with this platform,you can make your own rules & and initial state.
+ *  I'll make a plan first ,about how to do this
+ */

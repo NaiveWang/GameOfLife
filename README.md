@@ -17,6 +17,8 @@ It's worth saying that we just modify it at the life process's beginning,all we 
 2.the rules during game:how to live,how to die,how to xu.
 When playing the game,player plays role in god,says the poem:G L G J S S Y , Q Y H F B Q Z...
 2017/1/10 NaiveWang Yantai
+
+
         中文
 实际上，“生命游戏”这个点子来源于一个逼格更高的名字：元细胞自动机，这玩意是个游戏，游戏的界面是个二维的矩阵，
 里面的黑色部分相当于真空，白色小点相当于生命体。这里所说的生命体并不是常规意义上的生命体，它更加广义：
@@ -29,3 +31,7 @@ When playing the game,player plays role in god,says the poem:G L G J S S Y , Q Y
 2.规则：如何生，如何死，如何续命
 于是乎，在玩游戏的时候，玩家扮演上帝角色，嘴里嘟念着：我说另请高明吧，我一个屁民怎么就当上帝了呢，所以我就念了两句诗：苟。
 2017年一月十号 烟台
+
+I use C language to run it,with OpenGL.
+Let's wait and see，
+闷声大发财。

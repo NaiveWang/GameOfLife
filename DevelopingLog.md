@@ -7,3 +7,4 @@ Plan:
 2.Learn OpenGL:interactive with Mouse & Keyboard.
 3.Build it with pure C & glut
 Inspection:
+I did nothing today. SH_T

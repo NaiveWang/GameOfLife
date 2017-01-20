@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1484919391 source:f:\c\gol\main.c
+	<stdio.h>
+	<stdlib.h>
+	"GOL.h"
+
+1484919460 f:\c\gol\gol.h
+	<stdlib.h>
+	<GL/glut.h>
+	<time.h>
+

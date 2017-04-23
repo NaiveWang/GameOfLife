@@ -1,6 +1,6 @@
 # GameOfLife
-GameOfLife with openGL,C language
-#preface
+### GameOfLife with openGL,C language
+# preface
         English
 I come up with this idea with "Cellular Automaton", we also called it Game of Life.
 It's a game without interactive,when the starting condition was set,the game start,running in a 2-dimension matrix,we assume that

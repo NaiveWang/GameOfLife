@@ -1,6 +1,16 @@
+#define FXXX_WINDOWS
+/*
+ *Suck My Balls, Microsoft!
+**/
 #include <stdlib.h>
+#include <string.h>
 #include <GL/glut.h>
+#ifdef WIN
 #include <time.h>
+#endif
+#ifdef FXXX_WINDOWS
+#include <unistd.h>
+#endif
 /*
  * @author NaiveWang
  * @email wanhzhiwen@gmail.com
@@ -47,8 +57,8 @@ void M_init(matrix *M,int h,int w)
     M->height = h;
     M->width = w;
     M->status = 0;
-    ZeroMemory(M->A,h*w*sizeof(SOD));
-    ZeroMemory(M->B,h*w*sizeof(SOD));
+    memset(M->A,0,h*w*sizeof(SOD));
+    memset(M->B,0,h*w*sizeof(SOD));
 }
 void M_free(matrix *M)
 {
@@ -163,7 +173,12 @@ void Display()
         //glEnd();
         glFlush();
         Process(&M);
+#ifdef WIN
         Sleep(100);
+#endif
+#ifdef FXXX_WINDOWS
+        usleep(100);
+#endif
     }
     else
     {
@@ -201,11 +216,11 @@ void myReshape(GLsizei w,GLsizei h)
 {
     glViewport(0,0,w,h);
 
-    glMatrixMode(GL_PROJECTION);//Ö¸Ã÷µ±Ç°¾ØÕóÎªGL_PROJECTION
-    glLoadIdentity();//½«µ±Ç°¾ØÕóÖÃ»»Îªµ¥Î»Õó
+    glMatrixMode(GL_PROJECTION);//Ö¸ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ÎªGL_PROJECTION
+    glLoadIdentity();//ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½
 
-    gluOrtho2D(0.0,T_WIDTH,0.0,T_HEIGHT);//¶¨Òå¶þÎ¬ÕýÊÓÍ¶Ó°¾ØÕó
-    glMatrixMode(GL_MODELVIEW);//Ö¸Ã÷µ±Ç°¾ØÕóÎªGL_MODELVIEW
+    gluOrtho2D(0.0,T_WIDTH,0.0,T_HEIGHT);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½Í¶Ó°ï¿½ï¿½ï¿½ï¿½
+    glMatrixMode(GL_MODELVIEW);//Ö¸ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ÎªGL_MODELVIEW
 }
 /*Controlling section*/
 void Start(unsigned char key,int x,int y)
@@ -231,4 +246,3 @@ void SetDot(int button,int state,int x,int y)
         if(button==GLUT_RIGHT_BUTTON) init_lock=0;
     }
 }
-

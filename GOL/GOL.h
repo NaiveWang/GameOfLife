@@ -9,6 +9,7 @@
 #include <time.h>
 #endif
 #ifdef FXXX_WINDOWS
+#include <time.h>
 #include <unistd.h>
 #endif
 /*
@@ -16,8 +17,8 @@
  * @email wanhzhiwen@gmail.com
  * Creative Commons
  **/
-#define T_HEIGHT    100
-#define T_WIDTH     100
+#define T_HEIGHT    1000
+#define T_WIDTH     1000
 #define W_HEIGHT    1000
 #define W_WIDTH     1000
 /*debug function section*/
@@ -52,6 +53,8 @@ int init_lock;
 /*Initializing section*/
 void M_init(matrix *M,int h,int w)
 {
+    srand(time(NULL));
+
     M->A = malloc(h*w*sizeof(SOD));
     M->B = malloc(h*w*sizeof(SOD));
     M->height = h;
@@ -66,13 +69,13 @@ void M_free(matrix *M)
     free(M->B);
 }
 /*Dot Processing section*/
-int Edge(n,m)
+int Edge(int n,int m)
 {
     if(n==m)   return 0;
     if(n+1) return n;
     else    return m-1;
 }
-int Index(x,y,w)
+int Index(int x,int y,int w)
 {
     return x+y*w;
 }
